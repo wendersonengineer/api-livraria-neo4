@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@hx0hsp7qzndru@o_o+1loevy&xmtswho-5s_rtyd_mgsx+g=o
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['api-livraria-neo4.onrender.com', 'localhost', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
