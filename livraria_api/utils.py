@@ -1,12 +1,14 @@
 import os
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
 
+# Carrega as variáveis do arquivo .env local de forma segura
+load_dotenv()
 
-# Carrega o arquivo .env se ele existir localmente
-# Configuração direta para o seu computador local (localhost)
-NEO4J_URI = "neo4j://127.0.0.1:7687"
-NEO4J_USER = "neo4j"
-NEO4J_PASSWORD = "migracao"
+# O Python lê as credenciais direto da memória invisível do sistema
+NEO4J_URI = os.environ.get("NEO4J_URI")
+NEO4J_USER = os.environ.get("NEO4J_USER", "neo4j")
+NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD")
 
 
 class Neo4jConnection:
